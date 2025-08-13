@@ -1,0 +1,108 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  # Rust Ingestion Service
+  - job_name: "rust-ingest"
+    static_configs:
+      - targets: ["rust-ingest:8090"]
+    metrics_path: /metrics
+    scrape_interval: 10s
+    scrape_timeout: 5s
+
+  # Go Processing Service
+  - job_name: "go-processor"
+    static_configs:
+      - targets: ["go-processor:9090"]
+    metrics_path: /metrics
+    scrape_interval: 10s
+    scrape_timeout: 5s
+
+  # Java API Service
+  - job_name: "java-api"
+    static_configs:
+      - targets: ["java-api:8080"]
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+    scrape_timeout: 10s
+
+  # Redpanda Metrics
+  - job_name: "redpanda"
+    static_configs:
+      - targets: ["redpanda:9644"]
+    metrics_path: /metrics
+    scrape_interval: 30s
+    scrape_timeout: 10s
+
+  # TimescaleDB Exporter (if using postgres_exporter)
+  - job_name: "timescaledb"
+    static_configs:
+      - targets: ["timescaledb:9187"]
+    metrics_path: /metrics
+    scrape_interval: 30s
+    scrape_timeout: 10s
+
+  # Node Exporter for system metrics (if added)
+  - job_name: "node-exporter"
+    static_configs:
+      - targets: ["node-exporter:9100"]
+    scrape_interval: 15s
+
+  # Grafana metrics
+  - job_name: "grafana"
+    static_configs:
+      - targets: ["grafana:3000"]
+    metrics_path: /metrics
+    scrape_interval: 30s
+
+  # Keycloak metrics (if enabled)
+  - job_name: "keycloak"
+    static_configs:
+      - targets: ["keycloak:8080"]
+    metrics_path: /auth/realms/master/metrics
+    scrape_interval: 30s
+
+  # MQTT Broker metrics (if exporter is available)
+  - job_name: "mosquitto"
+    static_configs:
+      - targets: ["mosquitto:9234"]
+    metrics_path: /metrics
+    scrape_interval: 30s
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  - "alert_rules.yml"
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+# Example alert rules (can be expanded)
+# alert_rules.yml would contain:
+# groups:
+# - name: iot_platform_alerts
+#   rules:
+#   - alert: HighMessageIngestionRate
+#     expr: rate(kafka_messages_total[5m]) > 1000
+#     for: 2m
+#     labels:
+#       severity: warning
+#     annotations:
+#       summary: "High message ingestion rate detected"
+#
+#   - alert: ServiceDown
+#     expr: up == 0
+#     for: 1m
+#     labels:
+#       severity: critical
+#     annotations:
+#       summary: "Service {{ $labels.instance }} is down"

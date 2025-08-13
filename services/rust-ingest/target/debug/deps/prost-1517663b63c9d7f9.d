@@ -1,0 +1,10 @@
+/Users/alonzasearer/Documents/New Portfolio Projects/iot-realtime-platform/services/rust-ingest/target/debug/deps/libprost-1517663b63c9d7f9.rmeta: /Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/lib.rs /Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/error.rs /Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/message.rs /Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/types.rs /Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/encoding.rs /Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/../README.md
+
+/Users/alonzasearer/Documents/New Portfolio Projects/iot-realtime-platform/services/rust-ingest/target/debug/deps/prost-1517663b63c9d7f9.d: /Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/lib.rs /Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/error.rs /Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/message.rs /Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/types.rs /Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/encoding.rs /Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/../README.md
+
+/Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/lib.rs:
+/Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/error.rs:
+/Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/message.rs:
+/Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/types.rs:
+/Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/encoding.rs:
+/Users/alonzasearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-0.11.9/src/../README.md:
