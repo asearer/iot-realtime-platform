@@ -1,0 +1,10 @@
+/home/asearer/Documents/Projects/iot-realtime-platform/services/rust-ingest/target/debug/deps/prost_types-176a444d76932eb5.d: /home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/lib.rs /home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/datetime.rs /home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/compiler.rs /home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/protobuf.rs
+
+/home/asearer/Documents/Projects/iot-realtime-platform/services/rust-ingest/target/debug/deps/libprost_types-176a444d76932eb5.rlib: /home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/lib.rs /home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/datetime.rs /home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/compiler.rs /home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/protobuf.rs
+
+/home/asearer/Documents/Projects/iot-realtime-platform/services/rust-ingest/target/debug/deps/libprost_types-176a444d76932eb5.rmeta: /home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/lib.rs /home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/datetime.rs /home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/compiler.rs /home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/protobuf.rs
+
+/home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/lib.rs:
+/home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/datetime.rs:
+/home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/compiler.rs:
+/home/asearer/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/prost-types-0.11.9/src/protobuf.rs:

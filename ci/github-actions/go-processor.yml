@@ -1,0 +1,52 @@
+name: Go Processor Service
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'services/go-processor/**'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - 'services/go-processor/**'
+
+env:
+  GO_VERSION: 1.21
+  WORKING_DIRECTORY: services/go-processor
+
+jobs:
+  build:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: ${{ env.GO_VERSION }}
+        cache-dependency-path: services/go-processor/go.sum
+
+    - name: Install dependencies
+      run: go mod download
+
+    - name: Verify dependencies
+      run: go mod verify
+
+    - name: Run golangci-lint
+      uses: golangci/golangci-lint-action@v3
+      with:
+        version: v1.54
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+        args: --timeout=5m
+
+    - name: Run Tests
+      run: go test -v ./...
+
+    - name: Build
+      run: go build -v ./...

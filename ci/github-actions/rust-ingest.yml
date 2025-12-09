@@ -1,0 +1,59 @@
+name: Rust Ingestion Service
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'services/rust-ingest/**'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - 'services/rust-ingest/**'
+
+env:
+  CARGO_TERM_COLOR: always
+  WORKING_DIRECTORY: services/rust-ingest
+
+jobs:
+  build:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ${{ env.WORKING_DIRECTORY }}
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install protobuf-compiler
+      run: sudo apt-get install -y protobuf-compiler
+
+    - name: Install Rust toolchain
+      uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: stable
+        override: true
+        components: rustfmt, clippy
+
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cargo/registry
+          ~/.cargo/git
+          services/rust-ingest/target
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+    - name: Check Formatting
+      run: cargo fmt -- --check
+
+    - name: Run Clippy
+      run: cargo clippy -- -D warnings
+
+    - name: Run Tests
+      run: cargo test --verbose
+
+    - name: Build
+      run: cargo build --verbose

@@ -1,0 +1,16 @@
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/model/UserRole.java
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/IotApiApplication.java
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/model/Device.java
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/service/AlertService.java
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/service/DeviceService.java
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/security/RoleBasedAccess.java
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/model/MetricAggregate.java
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/repository/DeviceRepository.java
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/controller/MetricsController.java
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/controller/AlertController.java
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/model/Alert.java
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/repository/MetricAggregateRepository.java
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/repository/AlertRepository.java
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/service/MetricService.java
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/controller/DeviceController.java
+/home/asearer/Documents/Projects/iot-realtime-platform/services/java-api/src/main/java/com/example/iotapi/security/KeycloakSecurityConfig.java

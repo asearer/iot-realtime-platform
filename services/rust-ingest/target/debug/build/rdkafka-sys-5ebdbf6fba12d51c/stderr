@@ -1,0 +1,12 @@
+Building and linking librdkafka statically
+Running command: "cp -a librdkafka/. /home/asearer/Documents/Projects/iot-realtime-platform/services/rust-ingest/target/debug/build/rdkafka-sys-5ebdbf6fba12d51c/out" in dir: .
+Running command: "/home/asearer/Documents/Projects/iot-realtime-platform/services/rust-ingest/target/debug/build/rdkafka-sys-5ebdbf6fba12d51c/out/configure --disable-ssl --disable-gssapi --disable-curl --disable-zstd --disable-lz4-ext" in dir: /home/asearer/Documents/Projects/iot-realtime-platform/services/rust-ingest/target/debug/build/rdkafka-sys-5ebdbf6fba12d51c/out
+Running command: "make libs" in dir: /home/asearer/Documents/Projects/iot-realtime-platform/services/rust-ingest/target/debug/build/rdkafka-sys-5ebdbf6fba12d51c/out
+rdkafka_mock.c:1604:1: warning: conflicting types for ‘rd_kafka_mock_broker_decommission’ due to enum/integer mismatch; have ‘rd_kafka_resp_err_t(rd_kafka_mock_cluster_t *, int32_t)’ {aka ‘rd_kafka_resp_err_t(struct rd_kafka_mock_cluster_s *, int)’} [-Wenum-int-mismatch]
+ 1604 | rd_kafka_mock_broker_decommission(rd_kafka_mock_cluster_t *mcluster,
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from rdkafka_int.h:121,
+                 from rdkafka_mock.c:35:
+rdkafka_mock.h:387:1: note: previous declaration of ‘rd_kafka_mock_broker_decommission’ with type ‘int(rd_kafka_mock_cluster_t *, int32_t)’ {aka ‘int(struct rd_kafka_mock_cluster_s *, int)’}
+  387 | rd_kafka_mock_broker_decommission(rd_kafka_mock_cluster_t *cluster,
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
