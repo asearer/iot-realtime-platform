@@ -50,7 +50,7 @@ services:
     environment:
       POSTGRES_DB: iot_platform
       POSTGRES_USER: iot_user
-      POSTGRES_PASSWORD: iot_password
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
       TIMESCALEDB_TELEMETRY: 'off'
     ports:
       - "5432:5432"
@@ -71,11 +71,11 @@ services:
     container_name: iot-keycloak
     environment:
       KEYCLOAK_ADMIN: admin
-      KEYCLOAK_ADMIN_PASSWORD: admin123
+      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
       KC_DB: postgres
       KC_DB_URL: jdbc:postgresql://keycloak-db:5432/keycloak
       KC_DB_USERNAME: keycloak
-      KC_DB_PASSWORD: keycloak_password
+      KC_DB_PASSWORD: ${KEYCLOAK_DB_PASSWORD}
       KC_HOSTNAME: localhost
       KC_HTTP_ENABLED: 'true'
       KC_HOSTNAME_STRICT_HTTPS: 'false'
@@ -101,7 +101,7 @@ services:
     environment:
       POSTGRES_DB: keycloak
       POSTGRES_USER: keycloak
-      POSTGRES_PASSWORD: keycloak_password
+      POSTGRES_PASSWORD: ${KEYCLOAK_DB_PASSWORD}
     volumes:
       - keycloak_db_data:/var/lib/postgresql/data
     networks:
@@ -139,7 +139,7 @@ services:
       - "3000:3000"
     environment:
       GF_SECURITY_ADMIN_USER: admin
-      GF_SECURITY_ADMIN_PASSWORD: admin123
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD}
       GF_USERS_ALLOW_SIGN_UP: 'false'
       GF_INSTALL_PLUGINS: grafana-worldmap-panel,grafana-piechart-panel
     volumes:
@@ -237,7 +237,7 @@ services:
       SPRING_PROFILES_ACTIVE: "dev"
       SPRING_DATASOURCE_URL: "jdbc:postgresql://timescaledb:5432/iot_platform"
       SPRING_DATASOURCE_USERNAME: "iot_user"
-      SPRING_DATASOURCE_PASSWORD: "iot_password"
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
       SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
       SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: "http://keycloak:8080/realms/iot-platform"
       SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI: "http://keycloak:8080/realms/iot-platform/protocol/openid-connect/certs"

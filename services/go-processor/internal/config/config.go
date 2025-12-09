@@ -12,7 +12,7 @@ type Config struct {
 	AggregatesTopic string `envconfig:"AGGREGATES_TOPIC" default:"aggregates.minute"`
 	AlertsTopic     string `envconfig:"ALERTS_TOPIC" default:"alerts"`
 
-	DatabaseURL string `envconfig:"DATABASE_URL" default:"postgres://iot_user:iot_password@localhost:5432/iot_platform?sslmode=disable"`
+	DatabaseURL string `envconfig:"DATABASE_URL" required:"true"`
 
 	MetricsPort   string `envconfig:"METRICS_PORT" default:":9090"`
 	WebSocketPort string `envconfig:"WEBSOCKET_PORT" default:":8080"`
